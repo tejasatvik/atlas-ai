@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a12">
+  <meta name="description" content="Atlas AI is an early-stage project exploring an autonomous AI engineering platform for coordinating agents, experiments, and complex software workflows.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Atlas AI — From complex ideas to working software">
+  <meta property="og:description" content="An early-stage vision for a more capable, reproducible, and controllable AI engineering platform.">
+  <meta property="og:image" content="social-preview.svg">
+  <title>Atlas AI — From complex ideas to working software</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Atlas AI home">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3.5 32 28H4L18 3.5Z"/><path d="M18 14.2 26 28H10l8-13.8Z"/><circle cx="18" cy="22.4" r="2"/></svg>
+        <span>atlas<span class="brand-light">.ai</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="#product">Product</a><a href="#workflow">How it works</a><a href="#architecture">Architecture</a><a href="#vision">Vision</a>
+        <a class="nav-github" href="#github" data-github-link>GitHub <span aria-hidden="true">↗</span></a>
+        <a class="button button-small button-outline" href="#roadmap">Follow the project <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> Independent project <span class="eyebrow-divider">/</span> AI engineering</div>
+        <h1 id="hero-title">From complex ideas<br>to <span class="gradient-text">working software.</span></h1>
+        <p class="hero-intro">An AI engineering platform designed to coordinate specialized agents, execute experiments, and automate complex software development workflows.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#architecture">Explore the architecture <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#roadmap">View the roadmap <span aria-hidden="true">↓</span></a></div>
+        <div class="project-state"><span class="state-icon">◌</span> Early-stage project <span class="state-separator">·</span> In development</div>
+      </div>
+      <div class="hero-visual reveal" aria-label="Conceptual diagram of specialized AI agents coordinated by an orchestration engine">
+        <div class="visual-topline"><span>ATLAS / SYSTEM MAP</span><span><i></i> CONCEPTUAL</span></div>
+        <div class="diagram" id="agent-diagram">
+          <svg class="diagram-lines" viewBox="0 0 620 500" role="presentation" aria-hidden="true">
+            <defs><linearGradient id="lineGradient" x1="0" x2="1"><stop stop-color="#6b6ff5" stop-opacity=".12"/><stop offset=".5" stop-color="#a4a2ff" stop-opacity=".75"/><stop offset="1" stop-color="#52d9dd" stop-opacity=".2"/></linearGradient><filter id="lineGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+            <path class="orbit orbit-a" d="M310 250 145 114M310 250 310 83M310 250 475 114M310 250 145 386M310 250 310 417M310 250 475 386"/>
+            <path class="signal" d="M310 250 145 114M310 250 310 83M310 250 475 114M310 250 145 386M310 250 310 417M310 250 475 386"/>
+            <circle class="ring ring-one" cx="310" cy="250" r="110"/><circle class="ring ring-two" cx="310" cy="250" r="165"/>
+          </svg>
+          <button class="agent-node node-research" data-agent="research" aria-label="Research agent: gather context and evidence"><span class="node-icon">⌕</span><span class="node-name">Research</span><span class="node-role">Context &amp; evidence</span></button>
+          <button class="agent-node node-plan" data-agent="planning" aria-label="Planning agent: break work into tasks"><span class="node-icon">⌘</span><span class="node-name">Planning</span><span class="node-role">Tasks &amp; dependencies</span></button>
+          <button class="agent-node node-code" data-agent="coding" aria-label="Coding agent: create and revise code"><span class="node-icon">&lt;/&gt;</span><span class="node-name">Coding</span><span class="node-role">Build &amp; revise</span></button>
+          <button class="agent-node node-test" data-agent="testing" aria-label="Testing agent: run checks and experiments"><span class="node-icon">✓</span><span class="node-name">Testing</span><span class="node-role">Checks &amp; experiments</span></button>
+          <button class="agent-node node-eval" data-agent="evaluation" aria-label="Evaluation agent: assess output quality"><span class="node-icon">◒</span><span class="node-name">Evaluation</span><span class="node-role">Quality &amp; feedback</span></button>
+          <button class="agent-node node-review" data-agent="review" aria-label="Review agent: prepare work for human review"><span class="node-icon">◎</span><span class="node-name">Human review</span><span class="node-role">Direction &amp; approval</span></button>
+          <div class="orchestrator" id="orchestrator" tabindex="0" role="button" aria-label="Orchestration engine: coordinate the workflow"><div class="engine-rings"><span></span><span></span><span></span><b>AX</b></div><strong>Orchestration</strong><small>COORDINATION ENGINE</small></div>
+          <div class="diagram-tooltip" id="diagram-tooltip" role="status" aria-live="polite">Select an agent to explore its role</div>
+        </div>
+        <div class="visual-footer"><span>Specialized agents, one coordinated workflow</span><span class="visual-key"><i></i> Proposed system</span></div>
+      </div>
+      <div class="hero-bottom"><span>01 — A more deliberate way to build</span><span class="scroll-cue">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
+    </section>
+
+    <section class="section section-product" id="product">
+      <div class="section-wrap">
+        <div class="section-heading reveal"><div class="eyebrow">01 / THE PLATFORM</div><div><h2>An engineering system,<br><span class="muted-heading">not just another chatbot.</span></h2><p class="section-lede">The vision is a coordinated system that breaks ambitious work into manageable jobs, assigns the right agents, runs code in controlled environments, and learns from the results.</p></div></div>
+        <div class="capabilities">
+          <article class="capability reveal"><span class="cap-index">01</span><div class="cap-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3"/><circle cx="6" cy="8" r="2"/><circle cx="26" cy="8" r="2"/><circle cx="6" cy="24" r="2"/><circle cx="26" cy="24" r="2"/><path d="m8 9.5 5.5 4.5M24 9.5 18.5 14M8 22.5l5.5-4.5m10.5 4.5L18.5 18"/></svg></div><h3>Multi-agent orchestration</h3><p>Coordinate specialized agents that plan tasks, delegate work, exchange results, and recover from failures.</p><span class="cap-note">INTENDED CAPABILITY</span></article>
+          <article class="capability reveal"><span class="cap-index">02</span><div class="cap-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 8h22M5 16h22M5 24h22"/><circle cx="12" cy="8" r="3"/><circle cx="21" cy="16" r="3"/><circle cx="14" cy="24" r="3"/></svg></div><h3>Intelligent model routing</h3><p>Explore routing tasks to suitable frontier or open-weight models based on quality, latency, and cost.</p><span class="cap-note">INTENDED CAPABILITY</span></article>
+          <article class="capability reveal"><span class="cap-index">03</span><div class="cap-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="2"/><path d="M4 12h24M10 9h.01M14 9h.01M11 18l3 3 7-7"/></svg></div><h3>Isolated code execution</h3><p>Design workflows where generated code can run and be tested inside controlled environments.</p><span class="cap-note">INTENDED CAPABILITY</span></article>
+          <article class="capability reveal"><span class="cap-index">04</span><div class="cap-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 25V7m0 18h22M9 21l5-6 4 3 8-10"/><circle cx="26" cy="8" r="2"/></svg></div><h3>Evaluation and iteration</h3><p>Validate outputs, run experiments, inspect failures, and improve through structured feedback.</p><span class="cap-note">INTENDED CAPABILITY</span></article>
+        </div>
+        <p class="capability-disclaimer"><span>ⓘ</span> These are capabilities under exploration, not features of a launched product.</p>
+      </div>
+    </section>
+
+    <section class="section section-workflow" id="workflow">
+      <div class="section-wrap">
+        <div class="eyebrow reveal">02 / HOW IT COULD WORK</div><div class="workflow-heading reveal"><h2>From objective<br>to outcome.</h2><p>A human sets direction. A coordinated workflow does the legwork, makes its reasoning inspectable, and returns a result for review.</p></div>
+        <div class="workflow-track">
+          <article class="workflow-step reveal"><span class="step-number">01</span><div class="step-symbol">⌖</div><h3>Define the objective</h3><p>Describe the desired outcome, constraints, and what success should look like.</p></article>
+          <article class="workflow-step reveal"><span class="step-number">02</span><div class="step-symbol">⤨</div><h3>Decompose the task</h3><p>Translate the objective into smaller tasks, dependencies, and checkpoints.</p></article>
+          <article class="workflow-step reveal"><span class="step-number">03</span><div class="step-symbol">◈</div><h3>Assign specialists</h3><p>Route each part of the work to an agent suited to its role and context.</p></article>
+          <article class="workflow-step reveal"><span class="step-number">04</span><div class="step-symbol">⟳</div><h3>Execute &amp; evaluate</h3><p>Run work in controlled environments and assess outcomes against criteria.</p></article>
+          <article class="workflow-step reveal"><span class="step-number">05</span><div class="step-symbol">↗</div><h3>Review the result</h3><p>Present evidence and proposed changes so a person can approve next steps.</p></article>
+        </div>
+        <div class="workflow-line" aria-hidden="true"><span></span></div>
+        <div class="workflow-foot"><span>HUMAN DIRECTION</span><span class="workflow-arrow">→</span><span>COORDINATED EXECUTION</span><span class="workflow-arrow">→</span><span>HUMAN REVIEW</span></div>
+      </div>
+    </section>
+
+    <section class="section section-architecture" id="architecture">
+      <div class="section-wrap">
+        <div class="architecture-intro reveal"><div><div class="eyebrow">03 / SYSTEM DESIGN</div><h2>Designed around<br>a <span class="gradient-text">modular AI stack.</span></h2></div><p>A proposed architecture that keeps models, execution, and evaluation as replaceable parts. The components below are design directions under consideration.</p></div>
+        <div class="arch-panel reveal"><div class="arch-label"><span>PROPOSED ARCHITECTURE</span><span><i></i> EXPLORATORY</span></div><div class="arch-layers">
+          <div class="arch-layer"><span class="layer-number">06</span><div class="layer-name"><b>User interface &amp; task API</b><small>Task input · progress · review</small></div><div class="layer-tech">Web interface <span>/</span> API layer</div><span class="layer-mark">↗</span></div>
+          <div class="arch-layer"><span class="layer-number">05</span><div class="layer-name"><b>Orchestration &amp; planning</b><small>Task graph · agent coordination · recovery</small></div><div class="layer-tech">Workflow engine <span>/</span> State machine</div><span class="layer-mark">↗</span></div>
+          <div class="arch-layer"><span class="layer-number">04</span><div class="layer-name"><b>Model gateway &amp; routing</b><small>Provider abstraction · policy · selection</small></div><div class="layer-tech">Amazon Bedrock <span>/</span> Model adapters</div><span class="layer-mark">↗</span></div>
+          <div class="arch-layer"><span class="layer-number">03</span><div class="layer-name"><b>Agent execution &amp; sandbox isolation</b><small>Controlled jobs · ephemeral environments</small></div><div class="layer-tech">AWS Lambda or ECS <span>/</span> Isolated runners</div><span class="layer-mark">↗</span></div>
+          <div class="arch-layer"><span class="layer-number">02</span><div class="layer-name"><b>Evaluation &amp; observability</b><small>Checks · traces · cost awareness</small></div><div class="layer-tech">CloudWatch or equivalent <span>/</span> Evaluators</div><span class="layer-mark">↗</span></div>
+          <div class="arch-layer"><span class="layer-number">01</span><div class="layer-name"><b>Persistent storage &amp; cloud infrastructure</b><small>Artifacts · task state · configuration</small></div><div class="layer-tech">Amazon S3 <span>/</span> DynamoDB or PostgreSQL</div><span class="layer-mark">↗</span></div>
+        </div><div class="arch-foot"><span>Candidate technologies, subject to change.</span><span>BOUNDARIES FIRST <span class="arch-foot-mark">✳</span></span></div></div>
+      </div>
+    </section>
+
+    <section class="section section-usecases" id="use-cases">
+      <div class="section-wrap"><div class="usecase-header reveal"><div><div class="eyebrow">04 / EXAMPLE WORKFLOWS</div><h2>What coordinated<br>work might look like.</h2></div><span class="vision-tag">ENVISIONED USE CASES</span></div>
+        <div class="usecase-grid">
+          <article class="usecase-card reveal"><div class="usecase-visual research-visual"><span class="visual-token token-a">SOURCE 01</span><span class="visual-token token-b">SOURCE 02</span><span class="visual-token token-c">COMPARE</span><div class="research-core">⌕</div><svg viewBox="0 0 300 130" aria-hidden="true"><path d="M43 37 150 66 257 30M43 37l107 67 107-73M43 99l107-33 107-36M43 99l107 5 107-74"/></svg></div><div class="usecase-meta"><span>01</span><span>RESEARCH</span></div><h3>Research assistant</h3><p>Investigate a technical question, gather evidence, compare approaches, and produce a structured report.</p><a href="#vision" class="text-link">Explore the vision <span aria-hidden="true">↗</span></a></article>
+          <article class="usecase-card reveal"><div class="usecase-visual code-visual"><div class="code-window"><div class="code-dots"><i></i><i></i><i></i><span>solution.patch</span></div><div class="code-lines"><b>+</b><i></i><i class="short"></i><b>+</b><i></i><em>✓</em></div></div><div class="code-check">TESTS <span>READY FOR REVIEW</span></div></div><div class="usecase-meta"><span>02</span><span>SOFTWARE</span></div><h3>Software engineering agent</h3><p>Analyze a coding task, propose a patch, run tests, and present changes for review.</p><a href="#vision" class="text-link">Explore the vision <span aria-hidden="true">↗</span></a></article>
+          <article class="usecase-card reveal"><div class="usecase-visual experiment-visual"><div class="experiment-axis"><span>METRIC A</span><span>METRIC B</span></div><div class="experiment-chart"><i></i><i></i><i></i><i></i><i></i><span></span></div><div class="experiment-legend"><b>RUN 01</b><b>RUN 02</b><b>RUN 03</b></div></div><div class="usecase-meta"><span>03</span><span>EXPERIMENTS</span></div><h3>Experiment automation</h3><p>Configure experiments, execute jobs, collect results, and compare outcomes.</p><a href="#vision" class="text-link">Explore the vision <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-roadmap" id="roadmap">
+      <div class="section-wrap"><div class="roadmap-intro reveal"><div><div class="eyebrow">05 / WHAT'S NEXT</div><h2>Progress with<br><span class="muted-heading">purpose.</span></h2></div><div><span class="vision-tag">PROPOSED ROADMAP</span><p>A sequence of learning milestones, without artificial deadlines. Each phase should answer real questions before the next begins.</p></div></div>
+        <ol class="roadmap-list">
+          <li class="roadmap-item reveal"><span class="roadmap-phase">PHASE 01</span><div class="roadmap-dot"></div><div class="roadmap-content"><h3>Define scope &amp; core architecture</h3><p>Clarify the problem, system boundaries, and principles for safe, useful orchestration.</p></div><span class="roadmap-state">UP NEXT</span></li>
+          <li class="roadmap-item reveal"><span class="roadmap-phase">PHASE 02</span><div class="roadmap-dot"></div><div class="roadmap-content"><h3>Build a basic orchestration prototype</h3><p>Explore task decomposition, agent handoffs, and a clear view of workflow state.</p></div><span class="roadmap-state">PLANNED</span></li>
+          <li class="roadmap-item reveal"><span class="roadmap-phase">PHASE 03</span><div class="roadmap-dot"></div><div class="roadmap-content"><h3>Integrate models &amp; controlled execution</h3><p>Compare provider options and investigate isolated environments for generated code.</p></div><span class="roadmap-state">PLANNED</span></li>
+          <li class="roadmap-item reveal"><span class="roadmap-phase">PHASE 04</span><div class="roadmap-dot"></div><div class="roadmap-content"><h3>Add evaluation, observability &amp; cost controls</h3><p>Make outcomes inspectable, measure quality, and surface resource use and failures.</p></div><span class="roadmap-state">PLANNED</span></li>
+          <li class="roadmap-item reveal"><span class="roadmap-phase">PHASE 05</span><div class="roadmap-dot"></div><div class="roadmap-content"><h3>Test real workflows &amp; gather feedback</h3><p>Learn from practical use and revise the product direction around what helps.</p></div><span class="roadmap-state">PLANNED</span></li>
+        </ol><p class="roadmap-note"><span>ⓘ</span> All phases are proposed. No milestones are represented as complete.</p>
+      </div>
+    </section>
+
+    <section class="vision-section" id="vision"><div class="vision-grid"></div><div class="section-wrap vision-content reveal"><div class="eyebrow">06 / THE LONG VIEW</div><div class="vision-main"><h2>Make complex engineering<br>work more <span class="gradient-text">accessible.</span></h2><p>We imagine AI-assisted workflows that make ambitious software work easier to start and safer to deliver. The goal is capability with control: people stay in charge, work can be reproduced, models remain flexible, and every result earns trust through evaluation.</p><a class="button button-primary" href="#roadmap">See the proposed roadmap <span aria-hidden="true">↗</span></a></div><div class="principles"><div><span>01</span><b>Human oversight</b><small>People set intent and approve meaningful changes.</small></div><div><span>02</span><b>Reproducible execution</b><small>Make runs, inputs, and outcomes easier to inspect.</small></div><div><span>03</span><b>Model flexibility</b><small>Keep the architecture open to different providers.</small></div><div><span>04</span><b>Evaluate, then trust</b><small>Validate work with evidence, not assumption.</small></div><div><span>05</span><b>Security &amp; cost awareness</b><small>Design for bounded execution and practical controls.</small></div></div></div></section>
+  </main>
+
+  <footer class="site-footer" id="github"><div class="section-wrap"><div class="footer-main"><div class="footer-brand-col"><a class="brand" href="#top" aria-label="Atlas AI home"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3.5 32 28H4L18 3.5Z"/><path d="M18 14.2 26 28H10l8-13.8Z"/><circle cx="18" cy="22.4" r="2"/></svg><span>atlas<span class="brand-light">.ai</span></span></a><p>An early-stage exploration of autonomous AI engineering.</p></div><div class="footer-links"><div><span class="footer-label">EXPLORE</span><a href="#product">Product</a><a href="#workflow">How it works</a><a href="#architecture">Architecture</a><a href="#vision">Vision</a></div><div><span class="footer-label">PROJECT</span><a href="#roadmap">Proposed roadmap</a><a href="#github" data-github-link>GitHub <span aria-hidden="true">↗</span></a></div></div></div><div class="footer-bottom"><p>Atlas AI is an early-stage project. Features and architecture described here represent the current vision and may change.</p><span>© <span id="year">2026</span> ATLAS AI <span class="footer-spark">✳</span></span></div></div></footer>
+</body>
+</html>
